@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AI Documentary Studio Pro</title>
     
+    <!-- ========================================================== -->
+    <!-- KODE ANTI COPAS DAN KLIK KANAN (DITEMPATKAN DI ATAS </head>) -->
+    <!-- ========================================================== -->
+    <script type="text/javascript">function disableSelection(e){if(typeof e.onselectstart!="undefined")e.onselectstart=function(){return false};else if(typeof e.style.MozUserSelect!="undefined")e.style.MozUserSelect="none";else e.onmousedown=function(){return false};e.style.cursor="default"}window.onload=function(){disableSelection(document.body)}</script>
+    <script type="text/javascript">function mousedwn(e){try{if(event.button==2||event.button==3)return false}catch(e){if(e.which==3)return false}}document.oncontextmenu=function(){return false};document.ondragstart=function(){return false};document.onmousedown=mousedwn</script>
+    <style type="text/css">* : (input, textarea) {-webkit-touch-callout: none;-webkit-user-select: none;}</style>
+    <style type="text/css">img {-webkit-touch-callout: none;-webkit-user-select: none;}</style>
+    <script type="text/javascript">document.onkeydown=function(e){e=e||window.event;if(e.keyCode==123||e.keyCode==18){return false}}</script>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -40,133 +49,6 @@
         .slide-up { animation: slideUp 0.3s ease-out; }
         @keyframes slideUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* ===== LOGIN PAGE STYLES ===== */
-        .login-page {
-            width: 100%;
-            max-width: 420px;
-            background: #0d1423;
-            border-radius: 24px;
-            padding: 36px 32px;
-            border: 1px solid #1a2a4a;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
-            position: relative;
-            overflow: hidden;
-        }
-        .login-page::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #6c5ce7, #a855f7, #6c5ce7);
-            background-size: 200% 100%;
-            animation: gradientMove 3s ease infinite;
-        }
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .login-page .logo .icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 16px;
-            background: linear-gradient(135deg, #6c5ce7, #a855f7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            margin: 0 auto 12px;
-            box-shadow: 0 8px 30px rgba(108, 92, 231, 0.3);
-        }
-        .login-page .form-group input {
-            width: 100%;
-            padding: 12px 16px;
-            background: #080c18;
-            border: 1px solid #1a2a4a;
-            border-radius: 12px;
-            color: #e8edf5;
-            font-size: 15px;
-            outline: none;
-            transition: border-color 0.3s;
-            font-family: inherit;
-        }
-        .login-page .form-group input:focus {
-            border-color: #6c5ce7;
-            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
-        }
-        .login-page .btn-login {
-            width: 100%;
-            padding: 14px;
-            background: linear-gradient(135deg, #6c5ce7, #a855f7);
-            border: none;
-            border-radius: 12px;
-            color: white;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: inherit;
-        }
-        .login-page .btn-login:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(108, 92, 231, 0.35);
-        }
-        .login-page .btn-login:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-        }
-        .login-page .error-msg {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.2);
-            border-radius: 10px;
-            padding: 10px 14px;
-            font-size: 13px;
-            color: #ef4444;
-            display: none;
-            margin-bottom: 12px;
-            text-align: center;
-        }
-        .login-page .error-msg.show {
-            display: block;
-            animation: shake 0.4s ease;
-        }
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-8px); }
-            75% { transform: translateX(8px); }
-        }
-        .login-page .contact-info a {
-            color: #a855f7;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .login-page .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .spinner-small {
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            border: 2px solid rgba(255,255,255,0.15);
-            border-top-color: white;
-            border-radius: 50%;
-            animation: spin 0.6s linear infinite;
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        @media (max-width: 480px) {
-            .login-page { padding: 24px 20px; border-radius: 16px; }
-            .login-page .logo h1 { font-size: 19px; }
-            .login-page .logo .icon { width: 48px; height: 48px; font-size: 22px; }
-        }
-
         /* Loading container untuk aplikasi utama */
         .app-loader {
             display: flex;
@@ -184,6 +66,9 @@
             width: 40px;
             height: 40px;
             animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -223,124 +108,7 @@
         };
 
         // ============================================================
-        // 2. KOMPONEN LOGIN
-        // ============================================================
-        function LoginPage({ onLoginSuccess }) {
-            const [username, setUsername] = useState('');
-            const [password, setPassword] = useState('');
-            const [error, setError] = useState('');
-            const [isLoading, setIsLoading] = useState(false);
-
-            const VALID_CREDENTIALS = {
-                username: 'admin',
-                password: '12345'
-            };
-
-            const handleLogin = () => {
-                setError('');
-                
-                if (!username.trim() || !password.trim()) {
-                    setError('Username dan password harus diisi!');
-                    return;
-                }
-
-                if (username === VALID_CREDENTIALS.username && password === VALID_CREDENTIALS.password) {
-                    setIsLoading(true);
-                    localStorage.setItem('studio_session', 'logged_in');
-                    setTimeout(() => {
-                        onLoginSuccess();
-                    }, 500);
-                } else {
-                    setError('Username atau password salah! Hubungi admin jika lupa.');
-                    setPassword('');
-                }
-            };
-
-            const handleKeyDown = (e) => {
-                if (e.key === 'Enter') handleLogin();
-            };
-
-            return (
-                <div style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    minHeight: '100vh',
-                    background: '#05070f',
-                    padding: '20px'
-                }}>
-                    <div className="login-page">
-                        <div className="logo">
-                            <div className="icon"><i className="fa-solid fa-wand-magic-sparkles"></i></div>
-                            <h1 style={{ fontSize: '22px', fontWeight: 800, color: '#f0f4f8' }}>Studio Konten Pro</h1>
-                            <p style={{ color: '#667799', fontSize: '13px', marginTop: '4px' }}>Masuk untuk mengakses aplikasi</p>
-                        </div>
-
-                        {error && (
-                            <div className="error-msg show">
-                                <i className="fa-solid fa-circle-exclamation"></i>
-                                <span>{error}</span>
-                            </div>
-                        )}
-
-                        <div className="form-group">
-                            <label style={{ display: 'block', fontSize: '12px', fontWeight: 600, color: '#667799', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '6px' }}>
-                                <i className="fa-regular fa-user"></i> Nama Pengguna
-                            </label>
-                            <input 
-                                type="text" 
-                                placeholder="Masukkan username..." 
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                                onKeyDown={handleKeyDown}
-                                autoComplete="username"
-                            />
-                        </div>
-
-                        <div className="form-group">
-                            <label style={{ display: 'block', fontSize: '12px', fontWeight: 600, color: '#667799', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '6px' }}>
-                                <i className="fa-solid fa-lock"></i> Kata Sandi
-                            </label>
-                            <input 
-                                type="password" 
-                                placeholder="Masukkan password..." 
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                onKeyDown={handleKeyDown}
-                                autoComplete="current-password"
-                            />
-                        </div>
-
-                        <button className="btn-login" onClick={handleLogin} disabled={isLoading}>
-                            {isLoading ? (
-                                <>
-                                    <span className="spinner-small"></span> Memproses...
-                                </>
-                            ) : (
-                                <>
-                                    <i className="fa-solid fa-arrow-right-to-bracket"></i> Masuk
-                                </>
-                            )}
-                        </button>
-
-                        <div className="contact-info" style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid #1a2a4a', textAlign: 'center', fontSize: '13px', color: '#667799' }}>
-                            <i className="fa-solid fa-headset"></i>
-                            Belum punya akses? Hubungi Admin:
-                            <a href="tel:087763865954"><strong>0877-6386-5954</strong></a>
-                            <br />
-                            <span style={{ fontSize: '11px', color: '#445566' }}>(WhatsApp / Telepon)</span>
-                        </div>
-
-                        <div style={{ textAlign: 'center', fontSize: '11px', color: '#334455', marginTop: '16px', letterSpacing: '0.5px' }}>
-                            v2.0 • OpenRouter AI
-                        </div>
-                    </div>
-                </div>
-            );
-        }
-
-        // ============================================================
-        // 3. DATA APLIKASI STUDIO
+        // 2. DATA APLIKASI STUDIO
         // ============================================================
         const CATEGORIES = [
             { id: 'wildlife', label: 'Satwa & Alam Liar', icon: '🦎' },
@@ -432,7 +200,7 @@
         ];
 
         // ============================================================
-        // 4. HELPERS
+        // 3. HELPERS
         // ============================================================
         function extractJSON(text) {
             if (!text) return null;
@@ -487,7 +255,7 @@
         }
 
         // ============================================================
-        // 5. KOMPONEN APLIKASI UTAMA (STUDIO DOKUMENTER)
+        // 4. KOMPONEN APLIKASI UTAMA (STUDIO DOKUMENTER)
         // ============================================================
         function StudioApp() {
             const [dark, setDark] = useState(() => localStorage.getItem("theme") === "dark");
@@ -1511,17 +1279,9 @@ JSON:
         }
 
         // ============================================================
-        // 6. KOMPONEN UTAMA (LOGIN + STUDIO)
+        // 5. KOMPONEN UTAMA (LANGSUNG STUDIO TANPA LOGIN)
         // ============================================================
         function MainApp() {
-            const [isLoggedIn, setIsLoggedIn] = useState(() => {
-                return localStorage.getItem('studio_session') === 'logged_in';
-            });
-
-            if (!isLoggedIn) {
-                return <LoginPage onLoginSuccess={() => setIsLoggedIn(true)} />;
-            }
-
             return <StudioApp />;
         }
 
@@ -1530,6 +1290,15 @@ JSON:
         // ============================================================
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<MainApp />);
+    </script>
+
+    <!-- ========================================================== -->
+    <!-- KODE ANTI CTRL + U (DITEMPATKAN DI ATAS </body>) -->
+    <!-- ========================================================== -->
+    <script type='text/javascript'>
+    //<![CDATA[
+    function redirectCU(e) {if (e.ctrlKey && e.which == 85) {window.location.replace("/"); return false;}} document.onkeydown = redirectCU;
+    //]]>
     </script>
 </body>
 </html>
